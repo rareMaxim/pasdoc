@@ -81,7 +81,8 @@ type
     lgSpanish,
     lgSwedish,
     lgHungarian,
-    lgCzech
+    lgCzech,
+    lgUkrainian
   );
 {$ELSE}
   TLanguageID = (
@@ -113,7 +114,8 @@ type
     lgSwedish,
     lgHungarian_1250,
     lgCzech_CP1250,
-    lgCzech_ISO_8859_2
+    lgCzech_ISO_8859_2,
+    lgUkrainian
    );
 {$ENDIF}
   { An enumeration type of all static output texts.
@@ -387,6 +389,7 @@ const
   aSwedish            : {$I lang\PasDoc_Languages_Swedish_utf8_bom.inc}
   aHungarian          : {$I lang\PasDoc_Languages_Hungarian_utf8_bom.inc}
   aCzech              : {$I lang\PasDoc_Languages_Czech_utf8_bom.inc}
+  aUkrainian          : {$I lang\PasDoc_Languages_Ukrainian_UTF8.inc}
 {$ELSE}
   aEnglish            : {$I lang\PasDoc_Languages_English_utf8.inc}
   aBosnian            : {$I lang\PasDoc_Languages_Bosnia_1250.inc}
@@ -417,6 +420,7 @@ const
   aHungarian_1250     : {$I lang\PasDoc_Languages_Hungarian_1250.inc}
   aCzech_ISO_8859_2   : {$I lang\PasDoc_Languages_Czech_iso_8859_2.inc}
   aCzech_CP1250       : {$I lang\PasDoc_Languages_Czech_1250.inc}
+  aUkrainian          : {$I lang\PasDoc_Languages_Ukrainian_1251.inc}
 {$ENDIF}
 
 {$IFDEF STRING_UNICODE}
@@ -441,7 +445,8 @@ const
     (Table: @aSpanish; Name: 'Spanish'; Syntax: 'es'; AspellLanguage: ''),
     (Table: @aSwedish; Name: 'Swedish'; Syntax: 'se'; AspellLanguage: 'sv'),
     (Table: @aHungarian; Name: 'Hungarian'; Syntax: 'hu'; AspellLanguage: ''),
-    (Table: @aCzech; Name: 'Czech'; Syntax: 'cz'; AspellLanguage: 'cs')
+    (Table: @aCzech; Name: 'Czech'; Syntax: 'cz'; AspellLanguage: 'cs'),
+    (Table: @aUkrainian; Name: 'Ukrainian'; Syntax: 'uk'; AspellLanguage: 'uk')
   );
 {$ELSE}
   LANGUAGE_ARRAY: array[TLanguageID] of TLanguageRecord = (
@@ -473,7 +478,8 @@ const
     (Table: @aSwedish; Name: 'Swedish'; Syntax: 'se'; CharSet: 'iso-8859-15'; AspellLanguage: 'sv'),
     (Table: @aHungarian_1250; Name: 'Hungarian (Codepage 1250)'; Syntax: 'hu.1250'; CharSet: 'windows-1250'; AspellLanguage: ''),
     (Table: @aCzech_CP1250; Name: 'Czech (Codepage 1250)'; Syntax: 'cz'; CharSet: 'windows-1250'; AspellLanguage: ''),
-    (Table: @aCzech_ISO_8859_2; Name: 'Czech (Codepage ISO 8859-2)'; Syntax: 'cz.iso-8859-2'; CharSet: 'iso-8859-2'; AspellLanguage: 'cs')
+    (Table: @aCzech_ISO_8859_2; Name: 'Czech (Codepage ISO 8859-2)'; Syntax: 'cz.iso-8859-2'; CharSet: 'iso-8859-2'; AspellLanguage: 'cs'),
+    (Table: @aUkrainian; Name: 'Ukrainian'; Syntax: 'uk.1251'; CharSet: 'windows-1251'; AspellLanguage: 'uk')
   );
 {$ENDIF}
 
